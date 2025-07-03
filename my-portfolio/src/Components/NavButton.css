@@ -1,0 +1,33 @@
+/* src/Components/NavLinkAnimated.css */
+
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.nav-link .underline {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .underline,
+.nav-link.active .underline {
+  transform: scaleX(1);
+}
