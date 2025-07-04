@@ -3,13 +3,9 @@
 .homepage-container {
   position: relative;
   width: 100%;
-  height: calc(100vh - 80px); /* Adjust if navbar changes */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  height: calc(100dvh - 80px); /* Adjust 80px to your actual navbar height */
   background-color: #dcdcdc;
+  overflow: hidden;
 }
 
 .dot-background {
@@ -24,29 +20,38 @@
   z-index: 0;
 }
 
-.hero-content {
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16vw;
+  height: 80%;
   z-index: 1;
-  text-align: center;
+  position: relative;
 }
 
-.profile-image {
-  width: 180px;
-  height: 180px;
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #111;
+  margin: 0;
+}
+
+.hero-image img {
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center top;
   border: 4px solid #000;
-  margin-bottom: 20px;
-}
-
-.hero-text {
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .page-indicator {
   position: absolute;
   bottom: 30px;
+  width: 100%;
   display: flex;
+  justify-content: center;
   gap: 10px;
   z-index: 1;
 }
