@@ -1,5 +1,3 @@
-// src/Components/NavLinkAnimated.js
-
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './NavButton.css';

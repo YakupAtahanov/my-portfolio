@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Components/Layout';
+import HomePage from './Pages/HomePage';
 
 // Dummy pages. I will create it later in /Pages folder.
-const Home = () => <div>Home</div>;
 const Skills = () => <div>Skills</div>;
 const Portfolio = () => <div>Portfolio</div>;
 const Background = () => <div>Background</div>;
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<HomePage />} />
           <Route path="skills" element={<Skills />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="background" element={<Background />} />
