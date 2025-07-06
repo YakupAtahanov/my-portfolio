@@ -1,11 +1,12 @@
 import profileImg from '../Assets/ProfilePic.jpg';
+import DotBackground from '../Components/DotBackground';
 import React from 'react';
 import './HomePage.css';
 
 export default function HomePage() {
   return (
     <div className="homepage-container">
-      <div className="dot-background" />
+      <DotBackground />
 
       <div className="hero-section">
         <div className="hero-text">
