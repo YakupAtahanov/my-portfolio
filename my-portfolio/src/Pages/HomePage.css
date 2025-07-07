@@ -1,10 +1,7 @@
-/* src/Pages/HomePage.css */
-
 .homepage-container {
   position: relative;
   width: 100%;
-  height: calc(100dvh - 80px); /* Adjust 80px to your actual navbar height */
-  background-color: #dcdcdc;
+  height: calc(100dvh - 68px);
   overflow: hidden;
 }
 
@@ -31,11 +28,39 @@
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: #111;
-  margin: 0;
+  margin-bottom: 0.75rem;
 }
+
+.hero-text {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin: 0;
+  max-width: 700px;
+}
+
+.hero-text-wrapper {
+  position: relative;
+  height: 140px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-text.active {
+  opacity: 1;
+  position: relative;
+}
+
 
 .hero-image img {
   width: 220px;
@@ -54,6 +79,7 @@
   justify-content: center;
   gap: 10px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .page-indicator .dot {
@@ -68,4 +94,36 @@
 .page-indicator .dot.active {
   opacity: 1;
   background-color: #000;
+}
+
+.slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.slide p {
+  font-size: 1.2rem;
+}
+
+.profile-image {
+  margin-top: 1rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  border: 4px solid #000;
 }

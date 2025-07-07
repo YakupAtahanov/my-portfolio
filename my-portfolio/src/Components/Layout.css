@@ -1,10 +1,15 @@
-/* src/Components/Layout.css */
+.layout-wrapper {
+  position: relative;
+  z-index: 0;
+}
 
 .layout {
   font-family: 'Inter', sans-serif;
-  background-color: #dcdcdc;
+  background-color: transparent;
   min-height: 100vh;
   position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .navbar {

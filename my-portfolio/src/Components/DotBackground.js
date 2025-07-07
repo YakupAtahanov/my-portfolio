@@ -1,25 +1,25 @@
-// src/Components/DotBackground.js
-
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 export default function DotBackground() {
-  const canvasRef = useRef();
+  const canvasRef = useRef(null);
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
     let mouse = { x: null, y: null };
-    const nodeCount = 50;
+    const nodeCount = 400;
     const nodes = [];
 
+    // Initialize node data
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
+        x: Math.random() * dimensions.width,
+        y: Math.random() * dimensions.height,
         radius: (Math.random() + 1) * 2,
         dx: (Math.random() - 0.5) * 0.5,
         dy: (Math.random() - 0.5) * 0.5,
@@ -27,29 +27,25 @@ export default function DotBackground() {
     }
 
     function draw() {
-      ctx.clearRect(0, 0, width, height);
+      ctx.clearRect(0, 0, dimensions.width, dimensions.height);
 
       for (let node of nodes) {
-        // Move nodes
         node.x += node.dx;
         node.y += node.dy;
 
-        // Bounce off edges
-        if (node.x < 0 || node.x > width) node.dx *= -1;
-        if (node.y < 0 || node.y > height) node.dy *= -1;
+        if (node.x < 0 || node.x > dimensions.width) node.dx *= -1;
+        if (node.y < 0 || node.y > dimensions.height) node.dy *= -1;
 
-        // Repel from mouse
         const dist = Math.hypot(node.x - mouse.x, node.y - mouse.y);
         if (dist < 80) {
           const angle = Math.atan2(node.y - mouse.y, node.x - mouse.x);
-          node.x += Math.cos(angle) * 1;
-          node.y += Math.sin(angle) * 1;
+          node.x += Math.cos(angle);
+          node.y += Math.sin(angle);
         }
 
-        // Draw node
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = 'grey';
         ctx.fill();
       }
 
@@ -64,8 +60,7 @@ export default function DotBackground() {
     };
 
     const handleResize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      setDimensions({ width: window.innerWidth, height: window.innerHeight });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -75,15 +70,19 @@ export default function DotBackground() {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [dimensions.width, dimensions.height]);
 
   return (
     <canvas
       ref={canvasRef}
+      width={dimensions.width}
+      height={dimensions.height}
       style={{
-        position: 'absolute',
+        position: 'fixed',
         top: 0,
         left: 0,
+        width: '100vw',
+        height: '100vh',
         zIndex: 0,
         pointerEvents: 'none',
       }}
