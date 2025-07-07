@@ -1,0 +1,19 @@
+.skills-container {
+  padding: 2rem 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  z-index: 1;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
