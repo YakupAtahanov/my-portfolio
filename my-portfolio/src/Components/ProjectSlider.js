@@ -12,7 +12,7 @@ export default function ProjectSlider({ projects }) {
     setTimeout(() => {
       setIndex(newIndex);
       setAnimating(false);
-    }, 400); // Match duration with CSS
+    }, 400);
   };
 
   useEffect(() => {

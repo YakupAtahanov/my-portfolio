@@ -4,8 +4,8 @@ export const projects = [
     description: "A smart card manager app that securely stores and organizes your cards. Built with Flutter and Firebase.",
     tech: ["Flutter", "Firebase", "Provider"],
     mediaType: "video",
-    mediaSrc: "/videos/cardex-demo.mp4",
-    github: "https://github.com/your/cardex",
+    mediaSrc: "/cardex-demo.mp4",
+    github: "https://github.com/YakupAtahanov/Cardex",
     liveDemo: "https://cardex.app",
   },
   {
@@ -13,8 +13,8 @@ export const projects = [
     description: "A multilingual chatbot for real-time conversation and translation powered by OpenAI and Node.js.",
     tech: ["React", "Node.js", "OpenAI API"],
     mediaType: "image",
-    mediaSrc: "/images/ai-assistant.png",
-    github: "https://github.com/your/ai-assistant",
+    mediaSrc: "/ai-assistant.png",
+    github: "https://google.com/",
     liveDemo: null,
   },
   {
@@ -22,8 +22,20 @@ export const projects = [
     description: "Remote rover control interface for a robotics competition. Supports live telemetry and mission scripting.",
     tech: ["C++", "Qt", "Serial"],
     mediaType: "image",
-    mediaSrc: "/images/rover-ui.png",
-    github: "https://github.com/your/rover",
+    mediaSrc: "/rover-ui.png",
+    github: "https://google.com/",
     liveDemo: null,
   },
 ];
+
+/*
+  {
+    title: "",
+    description: "",
+    tech: ["", "", ""],
+    mediaType: "video", //"image"
+    mediaSrc: "/videos/cardex-demo.mp4",
+    github: "https://github.com/your/cardex",
+    liveDemo: "https://cardex.app",
+  },
+*/
