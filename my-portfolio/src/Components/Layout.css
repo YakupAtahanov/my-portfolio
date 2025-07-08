@@ -6,7 +6,7 @@
 .layout {
   font-family: 'Inter', sans-serif;
   background-color: transparent;
-  min-height: 100vh;
+  min-height: calc(100dvh - 68px);;
   position: relative;
   overflow: hidden;
   z-index: 1;

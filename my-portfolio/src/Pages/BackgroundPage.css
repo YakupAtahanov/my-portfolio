@@ -1,0 +1,48 @@
+.background-page {
+  width: 100%;
+  height: calc(100dvh - 68px);
+  padding: 4rem 8vw;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.background-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.background-profile {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.background-profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+.background-profile li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.background-bio {
+  flex: 2;
+  min-width: 300px;
+}
+
+.background-bio h2 {
+  margin-bottom: 1rem;
+}
+
+.background-bio p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
