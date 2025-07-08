@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import ProjectCard from './ProjectCard';
 import './ProjectSlider.css';
 
 export default function ProjectSlider({ projects }) {
   const [index, setIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
-  const timeoutRef = useRef(null);
 
   const changeSlide = (newIndex) => {
     if (animating || newIndex === index) return;
