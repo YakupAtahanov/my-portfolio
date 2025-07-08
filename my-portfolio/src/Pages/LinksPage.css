@@ -1,0 +1,57 @@
+.links-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 8vw;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #111;
+}
+
+.links-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.links-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.link-card {
+  background-color: #f3f3f3;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  text-decoration: none;
+  color: #111;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.link-card .icon {
+  font-size: 2rem;
+  color: #333;
+}
+
+.link-card .text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.link-card .text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}

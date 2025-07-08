@@ -5,10 +5,7 @@ import HomePage from './Pages/HomePage';
 import SkillPage from './Pages/SkillPage';
 import PortfolioPage from './Pages/PortfolioPage';
 import BackgroundPage from './Pages/BackgroundPage';
-
-// Dummy pages. I will create it later in /Pages folder.
-const Background = () => <div>Background</div>;
-const Links = () => <div>Links</div>;
+import LinksPage from './Pages/LinksPage';
 
 function App() {
   return (
@@ -19,7 +16,7 @@ function App() {
           <Route path="skills" element={<SkillPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route path="background" element={<BackgroundPage />} />
-          <Route path="links" element={<Links />} />
+          <Route path="links" element={<LinksPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

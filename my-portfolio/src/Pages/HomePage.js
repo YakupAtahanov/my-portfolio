@@ -1,5 +1,4 @@
 import profileImg from '../Assets/ProfilePic.jpg';
-import DotBackground from '../Components/DotBackground';
 import React, { useState, useEffect, useRef } from 'react';
 import './HomePage.css';
 
