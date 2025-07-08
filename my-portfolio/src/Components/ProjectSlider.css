@@ -1,0 +1,66 @@
+.project-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+
+.project-media {
+  flex: 1;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background-color: #ddd;
+  padding: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.slider-content {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider-content.fade-out {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.slider-content.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.slider-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #aaa;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.slider-dots .dot.active {
+  background-color: #000;
+  opacity: 1;
+}
