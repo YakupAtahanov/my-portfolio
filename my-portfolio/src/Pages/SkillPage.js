@@ -1,31 +1,9 @@
 import React from 'react';
 import SkillChart from '../Components/SkillChart.js';
 import './SkillPage.css';
+import { skillCategories } from '../Data/skillsData';
 
 export default function SkillsPage() {
-  const programmingSkills = [
-    { label: 'C++', value: 55 },
-    { label: 'JavaScript', value: 80 },
-    { label: 'Python', value: 99 },
-    { label: 'Java', value: 92 },
-    { label: 'C#', value: 83 },
-    { label: 'Typescript', value: 80 },
-  ];
-
-  const frameworks = [
-    { label: 'React', value: 82 },
-    { label: 'Flutter', value: 88 },
-    { label: 'Node.js', value: 60 },
-    { label: 'Django', value: 62 },
-    { label: 'Tenserflow', value: 72 },
-  ];
-
-  const softSkills = [
-    { label: 'Problem Solving', value: 95 },
-    { label: 'Communication', value: 90 },
-    { label: 'Time Management', value: 75 },
-  ];
-
   const renderSection = (title, skills) => (
     <section>
       <h2>{title}</h2>
@@ -39,9 +17,9 @@ export default function SkillsPage() {
 
   return (
     <div className="skills-container">
-      {renderSection('Programming Skills', programmingSkills)}
-      {renderSection('Frameworks', frameworks)}
-      {renderSection('Soft Skills', softSkills)}
+      {renderSection('Programming Skills', skillCategories.programming)}
+      {renderSection('Frameworks', skillCategories.frameworks)}
+      {renderSection('Soft Skills', skillCategories.softSkills)}
     </div>
   );
 }

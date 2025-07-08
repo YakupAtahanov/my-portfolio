@@ -55,6 +55,7 @@ export default function SkillChart({ label, value }) {
         <Tooltip />
       </PieChart>
       <p style={{ marginTop: '0.5rem', fontWeight: '500' }}>{label}</p>
+      <p style={{ margin: 0, fontSize: '0.95rem', color: '#333' }}>{value}%</p>
     </div>
   );
 }
