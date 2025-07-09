@@ -9,7 +9,7 @@ import LinksPage from './Pages/LinksPage';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/my-portfolio">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
